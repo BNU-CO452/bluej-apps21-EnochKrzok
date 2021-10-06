@@ -1,0 +1,13 @@
+programming.print();
+ Module Code: CO452: Programming Concepts | Credit Value : 0
+programming.setCredit(15);
+programming.print();
+ Module Code: CO452: Programming Concepts | Credit Value : 15
+artificialIntelligence.addModule(programming);
+artificialIntelligence.print();
+ --------------------------------
+   App211: Course Details
+ --------------------------------
+
+ Course Code: BB1ARI1: BSc Artificial Intelligence
+ Module Code: CO452: Programming Concepts | Credit Value : 15
