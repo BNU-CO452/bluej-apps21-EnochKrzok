@@ -1,28 +1,53 @@
 
 /**
- * Write a description of class Module here.
+ * The Module class has the code title and credit value of the module
  *
- * @author (Enoch Jozue Krzok)
- * @version (1.0   6/10/2021)
+ * @author Enoch Jozue Krzok
+ * @version 1.0   6/10/2021
  */
 public class Module
 {
     // A unique identifier
-    private String mCode;
+    private String code;
     // The title of the subject
-    private String mTitle;
+    private String title;
     // The credite value
     private int creditValue;
 
     /**
      * create a module with a code and title 
      */
-    public Module(String mCode, String mTitle)
+    public Module(String code, String title)
     {
-        this.mCode = mCode;
-        this.mTitle = mTitle;
+        this.code = code;
+        this.title = title;
+        this.creditValue = 0 ;
     }
 
+    /**
+     * return code represent the module code
+     */
+    public String getCode()
+    {
+        return code;
+    }
+    
+     /**
+     * return code represent the module title
+     */
+    public String getTitle()
+    {
+        return title;
+    }
+   
+    /**
+     * return code represent the module crediteValue
+     */
+    public int getCreditValue()
+    {
+        return creditValue;
+    }
+    
     /**
      * Set the credite of the module
      */
@@ -36,7 +61,7 @@ public class Module
      */
     public void print()
     {
-        System.out.println(" Module Code: " + mCode + ": " + mTitle + " | Credit Value : " + creditValue);
+        System.out.println(" Module Code: " + code + ": " + title + " | Credit Value : " + creditValue);
     }
     
 }
