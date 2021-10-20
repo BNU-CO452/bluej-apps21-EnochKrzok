@@ -3,8 +3,8 @@ import java.util.ArrayList;
  * This class stores information about a course
  * that enrolled students may want to complete
  *
- * @author Derek Peacock and Nicholas Day
- * @version 0.1 11/Sep/2020
+ * @author Derek Peacock and Nicholas Day and Enoch Jozue Krzok
+ * @version 2.0 20/10/2021
  */
 public class Course
 {
@@ -19,10 +19,10 @@ public class Course
      
     public Course()
     {
-        this("G400", "BSc Computing");
+        this("BB1ARI1", "BSc Artificial Intelligence");
     }
     
-    /**
+        /**
      * Constructor for objects of class Course
      */
     public Course(String code, String title)
@@ -43,7 +43,7 @@ public class Course
      */
     public void createModules()
     {
-
+        
     }
     
     public void addModule(Module module)
@@ -89,6 +89,10 @@ public class Course
      */
     public void printModules()
     {
-        System.out.println();
+        for(Module module : modules)
+        {
+            module.print();
+            module.printCredit();
+        }
     }
 }

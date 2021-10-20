@@ -2,8 +2,8 @@
 /**
  * Write a description of class ModuleMark here.
  *
- * @author Derek Peacock and Nicholas Day
- * @version 2021-08-18
+ * @author Derek Peacock and Nicholas Day and Enoch Jozue Krzok
+ * @version 2.0 20/10/2021
  */
 public class ModuleMark
 {
