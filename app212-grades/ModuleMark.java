@@ -66,6 +66,6 @@ public class ModuleMark
     public void print()
     {
         module.print();
-        System.out.print("\t  " + getCredit() + "\t" + mark);
+        System.out.print("\t  " + getCredit() + "\t  " + mark);
     }
 }

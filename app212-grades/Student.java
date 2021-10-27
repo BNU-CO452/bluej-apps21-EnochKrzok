@@ -118,20 +118,20 @@ public class Student
     }
     
     /**
-     * Print the student's module marks 
+     * Print the student's grade 
      */
     private void printModules()
     {
         for(ModuleMark mark : marks)
         {
             mark.print();
-            System.out.println("\t" + course.convertToGrade(mark.getValue()));
+            System.out.println("\t   " + course.convertToGrade(mark.getValue()));
         }
     }
     
     /**
-     * Print the student's course, modules, marks, credits, grades
-     * and final grade
+     * Print the student's course (whats in the course and max credits),
+     * modules, marks, credits, grades and final grade
      */
     public void printTranscript()
     {
@@ -144,9 +144,9 @@ public class Student
         
         System.out.println();
         System.out.println();
-        System.out.println(" ---- \t -------------------- \t ------\t ---- \t -----");
-        System.out.println(" Code \t Module \t\tCredit\t Mark \t Grade");
-        System.out.println(" ---- \t -------------------- \t ------\t ---- \t -----");
+        System.out.println(" ---- \t --------------------------------- \t------\t ---- \t -----");
+        System.out.println(" Code \t Module \t\t\t\tCredit\t Mark \t Grade");
+        System.out.println(" ---- \t --------------------------------- \t------\t ---- \t -----");
         
         printModules();
        

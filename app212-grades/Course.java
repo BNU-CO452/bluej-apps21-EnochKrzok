@@ -47,10 +47,10 @@ public class Course
      */
     public void createModules()
     {
-        Module co450 = new Module("CO450" , "Computer Architectures");
+        Module co450 = new Module("CO450" , "Computer Architectures           ");
         Module co407 = new Module("CO407" , "Essentials Of Intelligent Systems");
-        Module co452 = new Module("CO452" , "Programming Concepts");
-        Module co456 = new Module("CO456" , "Web Development");
+        Module co452 = new Module("CO452" , "Programming Concepts             ");
+        Module co456 = new Module("CO456" , "Web Development                  ");
         addModule(co450);
         addModule(co407);
         addModule(co452);
@@ -117,6 +117,7 @@ public class Course
         //System.out.println();
         
         printModules();
+        System.out.println();
     }
     
     /**

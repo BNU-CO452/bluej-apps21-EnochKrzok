@@ -1,0 +1,32 @@
+Student enoch = new Student();
+Course ai = new Course();
+enoch.enrol(ai);
+enoch.printTranscript();
+ ------------------------------------
+ App21-02: Exam Board Transcript 2021
+        by Enoch Jozue Krzok
+ ------------------------------------
+ Student ID: 22140200, Enoch Jozue Krzok
+
+ Course BB1ARI1: BSc Artificial Intelligence
+
+ CO450: Computer Architectures           	  15 credits
+ CO407: Essentials Of Intelligent Systems	  15 credits
+ CO452: Programming Concepts             	  15 credits
+ CO456: Web Development                  	  15 credits
+
+
+ ---- 	 --------------------------------- 	------	 ---- 	 -----
+ Code 	 Module 				Credit	 Mark 	 Grade
+ ---- 	 --------------------------------- 	------	 ---- 	 -----
+
+ CO450: Computer Architectures           	  15	  80	   A
+
+ CO407: Essentials Of Intelligent Systems	  0	  36	   F
+
+ CO452: Programming Concepts             	  15	  89	   A
+
+ CO456: Web Development                  	  15	  95	   A
+
+
+ Final Course Grade = A
