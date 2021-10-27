@@ -16,7 +16,11 @@ public class Course
     private String title;
     
     private Grades finalGrade;
-     
+    
+    /**
+     * This constructor creates a new course with a
+     * fixed code and title. 
+     */
     public Course()
     {
         this("BB1ARI1", "BSc Artificial Intelligence");
@@ -53,6 +57,9 @@ public class Course
         addModule(co456);
     }
     
+    /**
+     * Adds module to the list
+     */
     public void addModule(Module module)
     {
         if(modules.size() < MAXN_MODULES)
@@ -62,7 +69,7 @@ public class Course
     }
     
     /**
-     * 
+     * makes it so you get a grade dased on the marks you got
      */
     public Grades convertToGrade(int mark)
     {

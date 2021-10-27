@@ -18,7 +18,7 @@ public class Student
     private Course course;
     // The marks awarded for the modules on the course
     private ArrayList<ModuleMark> marks;
-    // So i can have random marks
+    // So i can use diffrent marks
     private Random randomMark;
     
     /**
@@ -32,6 +32,7 @@ public class Student
     
     /**
      * Create a new student with a given name and ID number.
+     *  And create a random number generater
      */
     public Student(String name, int id)
     {
@@ -40,7 +41,10 @@ public class Student
         randomMark = new Random();
         marks = new ArrayList<ModuleMark>();
     }
-
+    
+    /**
+     * adds a mark to the list
+     */
     public void addMark(ModuleMark mark)
     {
         marks.add(mark);
@@ -104,12 +108,18 @@ public class Student
         System.out.println(" Student ID: " + id + ", " + name);
     }
     
+    /**
+     * Print the student's course 
+     */
     public void printCourse()
     {
         this.print();
         course.print();
     }
     
+    /**
+     * Print the student's module marks 
+     */
     private void printModules()
     {
         for(ModuleMark mark : marks)
@@ -119,6 +129,10 @@ public class Student
         }
     }
     
+    /**
+     * Print the student's course, modules, marks, credits, grades
+     * and final grade
+     */
     public void printTranscript()
     {
         System.out.println(" ------------------------------------");
