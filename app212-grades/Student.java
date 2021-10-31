@@ -1,4 +1,5 @@
 import java.util.*;
+//adds the random function
 import java.util.Random;
 /**
  * The Student class represents a student in a student administration system.
@@ -105,7 +106,7 @@ public class Student
      */
     public void print()
     {
-        System.out.println(" Student ID: " + id + ", " + name);
+        System.out.println(" Student ID: " + id + ", Student name:  " + name);
     }
     
     /**

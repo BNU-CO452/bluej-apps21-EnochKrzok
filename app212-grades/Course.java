@@ -11,6 +11,8 @@ public class Course
     public final static int MAXN_MODULES = 4;
     
     public ArrayList<Module> modules;
+    // makes a array list for student
+    public ArrayList<Student> students;
     
     private String code;
     private String title;
@@ -38,6 +40,10 @@ public class Course
         modules  = new ArrayList<Module>();
         
         createModules();
+        
+        students = new ArrayList<Student>();
+        
+        createStudents();
     }
 
     /**
@@ -58,7 +64,8 @@ public class Course
     }
     
     /**
-     * Adds module to the list
+     * Adds module to the list if there is less modules already created 
+     * then max modules
      */
     public void addModule(Module module)
     {
@@ -66,6 +73,23 @@ public class Course
         {
             modules.add(module);
         }
+    }
+    
+    /**
+     * Create students to add to array list students 
+     * Hard code into proggram
+     */
+    public void createStudents()
+    {
+        
+    }
+    
+    /**
+     * Adds student to the list
+     */
+    public void addStudent(Student student)
+    {
+        students.add(student);
     }
     
     /**
@@ -129,6 +153,19 @@ public class Course
         {
             module.print();
             module.printCredit();
+        }
+    }
+    
+    /**
+     * Print the course's four modules
+     */
+    public void printStudents()
+    {
+        this.print();
+        System.out.println();
+        for(Student student : students)
+        {
+            student.print();
         }
     }
 }
