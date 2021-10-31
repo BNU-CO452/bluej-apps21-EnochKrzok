@@ -1,0 +1,16 @@
+Course ai = new Course();
+Student enoch = new Student();
+Student nick = new Student("Nickolas Day", 12345678);
+ai.addStudent(enoch);
+ai.addStudent(nick);
+ai.printStudents();
+
+ Course BB1ARI1: BSc Artificial Intelligence
+
+ CO450: Computer Architectures           	  15 credits
+ CO407: Essentials Of Intelligent Systems	  15 credits
+ CO452: Programming Concepts             	  15 credits
+ CO456: Web Development                  	  15 credits
+
+ Student ID: 22140200, Student name:  Enoch Jozue Krzok
+ Student ID: 12345678, Student name:  Nickolas Day
