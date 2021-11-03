@@ -4,8 +4,8 @@
  * The demonstration becomes properly functional as
  * the StockManager class is completed.
  * 
- * @author David J. Barnes and Michael Kölling.
- * @version 2016.02.29
+ * @author David J. Barnes and Michael Kölling and Enoch Jozue Krzok
+ * @version 3/11/21
  */
 public class StockDemo
 {
@@ -23,9 +23,10 @@ public class StockDemo
         // Add at least 10 products, they must be unique to you
         // Make sure the ids are sequential numbers
         
-        stock.add(new Product(101, "Samsung Galaxy S20"));
-        stock.add(new Product(102, "Apple iPhone 12"));
-        stock.add(new Product(103, "Google Pixel 4A"));
+        stock.add(new Product(101, "Nomads of the North"));
+        stock.add(new Product(102, "Butterfly Lion"));
+        stock.add(new Product(103, "Golden Compass"));
+        stock.add(new Product(104, "Necromancer"));
     }
     
     /**
@@ -50,9 +51,17 @@ public class StockDemo
     
     private void buyProducts()
     {
+        stock.buyProduct(101, 921);
+        stock.buyProduct(102, 4);
+        stock.buyProduct(103, 51);
+        stock.buyProduct(104, 13);
     }
 
     private void sellProducts()
     {
+        stock.sellProduct(101, 920);
+        stock.sellProduct(102);
+        stock.sellProduct(103, 21);
+        stock.sellProduct(104, 14);
     }    
 }
