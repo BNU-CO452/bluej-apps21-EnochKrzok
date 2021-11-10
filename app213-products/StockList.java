@@ -27,7 +27,7 @@ public class StockList
     {
         stock.add(item);
     }
-    
+
     /**
      * remove a product from the list.
      * @param item The product item to be removed.
@@ -42,10 +42,10 @@ public class StockList
         }
         else
         {
-           System.out.println("No item with that ID exist");
+            System.out.println("No item with that ID exist");
         }
     }
-    
+
     /**
      * A method to buy a single quantity of the product
      */
@@ -53,7 +53,7 @@ public class StockList
     {
         buyProduct(productID, 1);
     }
-    
+
     /**
      * Buy a quantity of a particular product.
      * Increase the quantity of the product by the given amount.
@@ -63,7 +63,7 @@ public class StockList
     public void buyProduct(int productID, int amount)
     {
         Product product = findProduct(productID);
-        
+
         if(product != null) 
         {
             if(product.getQuantity() < 1000)
@@ -84,7 +84,7 @@ public class StockList
             System.out.println("Product is not sold at this location");
         }
     }
-    
+
     /**
      * Find a product to match the product id,
      * if not found return null
@@ -100,7 +100,10 @@ public class StockList
         }
         return null;
     }
-    
+
+    /**
+     * finds the product that starts with whatever you string you want
+     */
     public void findProducts(String phrase)
     {
         for(Product product : stock)
@@ -111,7 +114,10 @@ public class StockList
             }
         }
     }
-    
+
+    /**
+     * prints out stock that has quantity 10 or below
+     */
     public void lowStock()
     {
         for(Product product : stock)
@@ -122,7 +128,7 @@ public class StockList
             }
         }
     }
-    
+
     /**
      * A method to sell a single quantity of the product
      */
@@ -130,7 +136,7 @@ public class StockList
     {
         sellProduct(productID, 1);
     }
-    
+
     /**
      * Sell one of the given product.
      * Show the before and after status of the product.
@@ -139,7 +145,7 @@ public class StockList
     public void sellProduct(int productID, int amount)
     {
         Product product = findProduct(productID);
-        
+
         if(product != null) 
         {
             if(product.getQuantity() > 0 && product.getQuantity() >= amount)
@@ -165,7 +171,6 @@ public class StockList
         }
     }    
 
-    
     /**
      * Locate a product with the given ID, and return how
      * many of this item are in stock. If the ID does not
@@ -191,13 +196,13 @@ public class StockList
     public void printProduct(int productID)
     {
         Product product = findProduct(productID);
-        
+
         if(product != null) 
         {
             System.out.println(product.toString());
         }
     }
-    
+
     /**
      * Print out each product in the stock
      * in the order they are in the stock list
@@ -205,7 +210,7 @@ public class StockList
     public void print()
     {
         printHeading();
-        
+
         for(Product product : stock)
         {
             System.out.println(product);
@@ -213,12 +218,15 @@ public class StockList
 
         System.out.println();
     }
-    
+
+    /**
+     * Print out a heading
+     */
     public void printHeading()
     {
         System.out.println();
-        System.out.println(" Enoch's Stock List");
-        System.out.println(" ====================");
+        System.out.println(" Enoch's way of showing Stock List");
+        System.out.println(" ====================================");
         System.out.println();
     }
 }

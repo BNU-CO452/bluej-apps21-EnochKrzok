@@ -19,10 +19,10 @@ public class StockDemo
     public StockDemo(StockList stock)
     {
         this.stock = stock;
-        
+
         // Add at least 10 products, they must be unique to you
         // Make sure the ids are sequential numbers
-        
+
         stock.add(new Product(101, "Horizon Zero Dawn"));
         stock.add(new Product(102, "Forza Horizon 5"));
         stock.add(new Product(103, "League of Ledgends"));
@@ -34,7 +34,7 @@ public class StockDemo
         stock.add(new Product(109, "Test Drive Unlimited Solar Crown"));
         stock.add(new Product(110, "Horizon Forbidden west"));
     }
-    
+
     /**
      * Provide a demonstration of how the ProductList meets all
      * the user requirements by making a delivery of each product 
@@ -45,7 +45,7 @@ public class StockDemo
     public void runDemo()
     {
         // Show details of all of the products before delivery.
-        
+
         stock.print();
 
         buyProducts();
@@ -54,7 +54,10 @@ public class StockDemo
         sellProducts();
         stock.print();        
     }
-    
+
+    /**
+     * buys stocks by ID with given amount.
+     */
     private void buyProducts()
     {
         stock.buyProduct(101, 231);
@@ -68,6 +71,9 @@ public class StockDemo
         stock.buyProduct(110, 986);
     }
 
+    /**
+     * sells stocks by ID with given amount.
+     */
     private void sellProducts()
     {
         stock.sellProduct(101, 123);

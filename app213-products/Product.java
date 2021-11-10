@@ -23,7 +23,7 @@ public class Product
     {
         this.id = id;
         this.name = name;
-        
+
         quantity = 0;
     }
 
@@ -51,22 +51,31 @@ public class Product
         return quantity;
     }
 
+    /**
+     *  sets the quantity of the stock.
+     */
     public void setQuantity(int quantity)
     {
         this.quantity = quantity;
     }
-    
+
+    /**
+     * increases The quantity of the stock by amount.
+     */
     public void increaseQuantity(int amount)
     {
         quantity = quantity + amount;
     }
-    
+
+    /**
+     * decreases The quantity of the stock by amount.
+     */
     public void decreaseQuantity(int amount)
     {
         if(quantity >= amount)
             quantity = quantity - amount;
     }
-    
+
     /**
      * @return The id, name and quantity in stock.
      */
@@ -75,7 +84,9 @@ public class Product
         return " ID " + id + ": " +  name + " stock level: " + quantity;
     }
 
-    
+    /**
+     * prints the above
+     */
     public void print()
     {
         System.out.println(toString());
