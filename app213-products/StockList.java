@@ -1,5 +1,5 @@
 import java.util.ArrayList;
-
+import java.util.*;
 /**
  * Manage the stock in a business.
  * The stock is described by zero or more Products.
@@ -30,13 +30,30 @@ public class StockList
     }
     
     /**
+     * remove a product from the list.
+     * @param item The product item to be removed.
+     */
+    public void remove(int productID)
+    {
+        Product product = findProduct(productID);
+        if(product != null) 
+        {
+            System.out.println(product + "has been removed");
+            stock.remove(product);
+        }
+        else
+        {
+           System.out.println("No item with that ID exist");
+        }
+    }
+    
+    /**
      * A method to buy a single quantity of the product
      */
     public void buyProduct(int productID)
     {
         buyProduct(productID, 1);
     }
-    
     
     /**
      * Buy a quantity of a particular product.
@@ -85,6 +102,17 @@ public class StockList
         return null;
     }
     
+    public void findProducts(String phrase)
+    {
+        for(Product product : stock)
+        {
+            if(product.getName().startsWith(phrase) == true)
+            {
+                System.out.println(product);
+            }
+        }
+    }
+    
     /**
      * A method to sell a single quantity of the product
      */
@@ -112,7 +140,7 @@ public class StockList
             }
             else if(product.getQuantity() <= amount)
             {
-                System.out.println(product.getName() + " doesnt have enough, only have " + product.getQuantity());
+                System.out.println(product.getName() + " You can't buy " + amount + " we only have " + product.getQuantity());
             }
             else
             {
@@ -123,7 +151,7 @@ public class StockList
         else
         {
             // printout message
-            System.out.println(product.getName() + " is not sold at this location");
+            System.out.println("It is not sold at this location");
         }
     }    
 
@@ -137,6 +165,11 @@ public class StockList
      */
     public int numberInStock(int productID)
     {
+        Product product = findProduct(productID);
+        if(product != null)
+        {
+            return product.getQuantity();
+        }
         return 0;
     }
 
@@ -174,7 +207,7 @@ public class StockList
     public void printHeading()
     {
         System.out.println();
-        System.out.println(" Peacock's Stock List");
+        System.out.println(" Enoch's Stock List");
         System.out.println(" ====================");
         System.out.println();
     }

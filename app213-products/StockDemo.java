@@ -23,10 +23,16 @@ public class StockDemo
         // Add at least 10 products, they must be unique to you
         // Make sure the ids are sequential numbers
         
-        stock.add(new Product(101, "Nomads of the North"));
-        stock.add(new Product(102, "Butterfly Lion"));
-        stock.add(new Product(103, "Golden Compass"));
-        stock.add(new Product(104, "Necromancer"));
+        stock.add(new Product(101, "Horizon Zero Dawn"));
+        stock.add(new Product(102, "Forza Horizon 5"));
+        stock.add(new Product(103, "League of Ledgends"));
+        stock.add(new Product(104, "CSGO"));
+        stock.add(new Product(105, "Hot Wheels Unleashed"));
+        stock.add(new Product(106, "Assassin's Creed Valhalla"));
+        stock.add(new Product(107, "Far Cry 6"));
+        stock.add(new Product(108, "Battlefield 2042"));
+        stock.add(new Product(109, "Test Drive Unlimited Solar Crown"));
+        stock.add(new Product(110, "Horizon Forbidden west"));
     }
     
     /**
@@ -51,17 +57,28 @@ public class StockDemo
     
     private void buyProducts()
     {
-        stock.buyProduct(101, 921);
-        stock.buyProduct(102, 4);
-        stock.buyProduct(103, 51);
-        stock.buyProduct(104, 13);
+        stock.buyProduct(101, 231);
+        stock.buyProduct(102, 1000);
+        stock.buyProduct(104);
+        stock.buyProduct(105, 738);
+        stock.buyProduct(106, 395);
+        stock.buyProduct(107, 51);
+        stock.buyProduct(108, 217);
+        stock.buyProduct(109, 111);
+        stock.buyProduct(110, 986);
     }
 
     private void sellProducts()
     {
-        stock.sellProduct(101, 920);
-        stock.sellProduct(102);
-        stock.sellProduct(103, 21);
-        stock.sellProduct(104, 14);
+        stock.sellProduct(101, 123);
+        stock.sellProduct(102, 768);
+        stock.sellProduct(103, 7);
+        stock.sellProduct(104, 17);
+        stock.sellProduct(105, 167);
+        stock.sellProduct(106, 337);
+        stock.sellProduct(107, 21);
+        stock.sellProduct(108, 127);
+        stock.sellProduct(109, 11);
+        stock.sellProduct(110, 896);
     }    
 }
