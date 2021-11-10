@@ -1,0 +1,24 @@
+Product pacman = new Product(256, "pacman");
+pacman.print();
+ ID 256: pacman stock level: 0
+pacman.decreaseQuantity(7);
+pacman.print();
+ ID 256: pacman stock level: 0
+pacman.increaseQuantity(17);
+pacman.print();
+ ID 256: pacman stock level: 17
+pacman.decreaseQuantity(7);
+pacman.print();
+ ID 256: pacman stock level: 10
+Product dynaBlaster = new Product(64, "Dyna Blaster");
+StockList gregsShop = new StockList();
+gregsShop.add(dynaBlaster);
+gregsShop.add(pacman);
+gregsShop.print();
+
+ Enoch's way of showing Stock List
+ ====================================
+
+ ID 64: Dyna Blaster stock level: 0
+ ID 256: pacman stock level: 10
+
