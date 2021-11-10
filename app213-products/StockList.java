@@ -1,5 +1,4 @@
 import java.util.ArrayList;
-import java.util.*;
 /**
  * Manage the stock in a business.
  * The stock is described by zero or more Products.
@@ -107,6 +106,17 @@ public class StockList
         for(Product product : stock)
         {
             if(product.getName().startsWith(phrase) == true)
+            {
+                System.out.println(product);
+            }
+        }
+    }
+    
+    public void lowStock()
+    {
+        for(Product product : stock)
+        {
+            if(product.getQuantity() <= 10)
             {
                 System.out.println(product);
             }
