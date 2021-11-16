@@ -60,10 +60,10 @@ public class StockList
      * @param id The ID of the product.
      * @param amount The amount to increase the quantity by.
      */
-    public void buyProduct(int productID, int amount)
+    public void buyProduct(int productID , int amount)
     {
         Product product = findProduct(productID);
-
+        
         if(product != null) 
         {
             if(product.getQuantity() < 1000)
@@ -129,6 +129,22 @@ public class StockList
         }
     }
 
+    /**
+     * prints out stock that has quantity 10 or below
+     */
+    public void reStock()
+    {
+        for(Product product : stock)
+        {
+            if(product.getQuantity() <= 10)
+            {
+                int id = product.getID();
+                buyProduct(id,100);
+                System.out.println(product);
+            }
+        }
+    }
+    
     /**
      * A method to sell a single quantity of the product
      */

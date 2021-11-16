@@ -1,0 +1,75 @@
+StockList letsGoooooo = new StockList();
+StockDemo noIdea = new StockDemo(letsGoooooo);
+noIdea.runDemo();
+
+ Enoch's way of showing Stock List
+ ====================================
+
+ ID 101: Horizon Zero Dawn stock level: 0
+ ID 102: Forza Horizon 5 stock level: 0
+ ID 103: League of Ledgends stock level: 0
+ ID 104: CSGO stock level: 0
+ ID 105: Hot Wheels Unleashed stock level: 0
+ ID 106: Assassin's Creed Valhalla stock level: 0
+ ID 107: Far Cry 6 stock level: 0
+ ID 108: Battlefield 2042 stock level: 0
+ ID 109: Test Drive Unlimited Solar Crown stock level: 0
+ ID 110: Horizon Forbidden west stock level: 0
+
+You have brought 231 of Horizon Zero Dawn
+You have brought 1000 of Forza Horizon 5
+You have brought 1 of CSGO
+You have brought 738 of Hot Wheels Unleashed
+You have brought 395 of Assassin's Creed Valhalla
+You have brought 51 of Far Cry 6
+You have brought 217 of Battlefield 2042
+You have brought 111 of Test Drive Unlimited Solar Crown
+You have brought 986 of Horizon Forbidden west
+
+ Enoch's way of showing Stock List
+ ====================================
+
+ ID 101: Horizon Zero Dawn stock level: 231
+ ID 102: Forza Horizon 5 stock level: 1000
+ ID 103: League of Ledgends stock level: 0
+ ID 104: CSGO stock level: 1
+ ID 105: Hot Wheels Unleashed stock level: 738
+ ID 106: Assassin's Creed Valhalla stock level: 395
+ ID 107: Far Cry 6 stock level: 51
+ ID 108: Battlefield 2042 stock level: 217
+ ID 109: Test Drive Unlimited Solar Crown stock level: 111
+ ID 110: Horizon Forbidden west stock level: 986
+
+You have sold 123 the Horizon Zero Dawn
+You have sold 768 the Forza Horizon 5
+League of Ledgends You can't buy 7 we only have 0
+CSGO You can't buy 17 we only have 1
+You have sold 167 the Hot Wheels Unleashed
+You have sold 337 the Assassin's Creed Valhalla
+You have sold 21 the Far Cry 6
+You have sold 127 the Battlefield 2042
+You have sold 11 the Test Drive Unlimited Solar Crown
+You have sold 896 the Horizon Forbidden west
+
+ Enoch's way of showing Stock List
+ ====================================
+
+ ID 101: Horizon Zero Dawn stock level: 108
+ ID 102: Forza Horizon 5 stock level: 232
+ ID 103: League of Ledgends stock level: 0
+ ID 104: CSGO stock level: 1
+ ID 105: Hot Wheels Unleashed stock level: 571
+ ID 106: Assassin's Creed Valhalla stock level: 58
+ ID 107: Far Cry 6 stock level: 30
+ ID 108: Battlefield 2042 stock level: 90
+ ID 109: Test Drive Unlimited Solar Crown stock level: 100
+ ID 110: Horizon Forbidden west stock level: 90
+
+letsGoooooo.lowStock();
+ ID 103: League of Ledgends stock level: 0
+ ID 104: CSGO stock level: 1
+letsGoooooo.reStock();
+You have brought 100 of League of Ledgends
+ ID 103: League of Ledgends stock level: 100
+You have brought 100 of CSGO
+ ID 104: CSGO stock level: 101
