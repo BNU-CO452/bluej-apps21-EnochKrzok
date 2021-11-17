@@ -130,7 +130,8 @@ public class StockList
     }
 
     /**
-     * prints out stock that has quantity 10 or below
+     * Buy the quantity of 100 to anyitem that is below 10 and then
+     * prints out stock of that item
      */
     public void reStock()
     {
