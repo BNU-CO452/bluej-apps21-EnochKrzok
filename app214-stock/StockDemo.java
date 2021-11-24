@@ -23,17 +23,6 @@ public class StockDemo
         // Add at least 10 products, they must be unique to you
         // Make sure the ids are sequential numbers
 
-        stock.add(new Product(101, "Horizon Zero Dawn"));
-        stock.add(new Product(102, "Forza Horizon 5"));
-        stock.add(new Product(103, "League of Ledgends"));
-        stock.add(new Product(104, "CSGO"));
-        stock.add(new Product(105, "Hot Wheels Unleashed"));
-        stock.add(new Product(106, "Assassin's Creed Valhalla"));
-        stock.add(new Product(107, "Far Cry 6"));
-        stock.add(new Product(108, "Battlefield 2042"));
-        stock.add(new Product(109, "Test Drive Unlimited Solar Crown"));
-        stock.add(new Product(110, "Horizon Forbidden west"));
-        
         runDemo();
     }
 
@@ -47,7 +36,7 @@ public class StockDemo
     public void runDemo()
     {
         // Show details of all of the products before delivery.
-
+        addProducts();
         stock.print();
 
         buyProducts();
@@ -57,6 +46,23 @@ public class StockDemo
         stock.print();        
     }
 
+    /**
+     * adds stock with ID and name.
+     */
+    private void addProducts()
+    {
+        stock.add(new Product(101, "Horizon Zero Dawn"));
+        stock.add(new Product(102, "Forza Horizon 5"));
+        stock.add(new Product(103, "League of Ledgends"));
+        stock.add(new Product(104, "CSGO"));
+        stock.add(new Product(105, "Hot Wheels Unleashed"));
+        stock.add(new Product(106, "Assassin's Creed Valhalla"));
+        stock.add(new Product(107, "Far Cry 6"));
+        stock.add(new Product(108, "Battlefield 2042"));
+        stock.add(new Product(109, "Test Drive Unlimited Solar Crown"));
+        stock.add(new Product(110, "Horizon Forbidden west"));
+    }
+    
     /**
      * buys stocks by ID with given amount.
      */

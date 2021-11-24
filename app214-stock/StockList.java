@@ -116,13 +116,13 @@ public class StockList
     }
 
     /**
-     * prints out stock that has quantity 10 or below
+     * prints out stock that has quantity amount or below
      */
-    public void lowStock()
+    public void lowStock(int amount)
     {
         for(Product product : stock)
         {
-            if(product.getQuantity() <= 10)
+            if(product.getQuantity() <= amount)
             {
                 System.out.println(product);
             }
@@ -130,17 +130,17 @@ public class StockList
     }
 
     /**
-     * Buy the quantity of 100 to anyitem that is below 10 and then
+     * Buy the quantity of quantity to anyitem that is below amount and then
      * prints out stock of that item
      */
-    public void reStock()
+    public void reStock(int amount, int quantity)
     {
         for(Product product : stock)
         {
-            if(product.getQuantity() <= 10)
+            if(product.getQuantity() <= amount)
             {
                 int id = product.getID();
-                buyProduct(id,100);
+                buyProduct(id,quantity);
                 System.out.println(product);
             }
         }

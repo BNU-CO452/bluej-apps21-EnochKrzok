@@ -1,6 +1,6 @@
 
 /**
- * Write a description of class Program here.
+ * This whole class is made so we can run the program in a terminal
  *
  * @author Enoch Jozue Krzok
  * @version 17/11/2021
