@@ -54,19 +54,19 @@ public class StockApp
             System.out.println("You have quit the app and it did not save");
             return true;
         }
-        else if(choice.equals("add") | choice.equals("1"))
+        else if(choice.equals("add") | choice.equals("a") | choice.equals("1"))
         {
             runAdd();
         }
-        else if(choice.equals("remove") | choice.equals("2"))
+        else if(choice.equals("remove") | choice.equals("rem") | choice.equals("2"))
         {
             runRemove();
         }
-        else if(choice.equals("print") | choice.equals("8"))
+        else if(choice.equals("print") | choice.equals("p") | choice.equals("8"))
         {
             stock.print();
         }
-        else if(choice.equals("buy") | choice.equals("4"))
+        else if(choice.equals("buy") | choice.equals("b") | choice.equals("4"))
         {
             runBuy();
         }
@@ -74,16 +74,16 @@ public class StockApp
         {
             runSell();
         }
-        else if(choice.equals("search") | choice.equals("3"))
+        else if(choice.equals("search") | choice.equals("sea") | choice.equals("3"))
         {
             String phrase = reader.getString("Please enter name of Product > ");
             stock.findProducts(phrase);
         }
-        else if(choice.equals("lowstock") | choice.equals("low stock") | choice.equals("6"))
+        else if(choice.equals("lowstock") | choice.equals("low stock") | choice.equals("l") | choice.equals("6"))
         {
             runLowstock();
         }
-        else if(choice.equals("re-stock") | choice.equals("restock") | choice.equals("7"))
+        else if(choice.equals("re-stock") | choice.equals("restock") | choice.equals("res") | choice.equals("7"))
         {
             runRestock();
         }
@@ -216,10 +216,18 @@ public class StockApp
     private void runAdd()
     {
         int id = reader.getInt("Please enter ID of product > ");
-        String name = reader.getString("Please enter name of product > ");
-        Product product = new Product(id, name);
-        stock.add(product);
-        System.out.println("Product " +product.getName()+ " with ID " +product.getID()+ " has been added");
+        Product find= stock.findProduct(id);
+        if(find == null)
+        {
+            String name = reader.getString("Please enter name of product > ");
+            Product product = new Product(id, name);
+            stock.add(product);
+            System.out.println("Product " +product.getName()+ " with ID " +product.getID()+ " has been added");
+        }
+        else
+        {
+            System.out.println("Sorry this ID has already got a product assigned to it");
+        }
     }
     
     /**
@@ -229,6 +237,5 @@ public class StockApp
     {
         int id = reader.getInt("Please enter ID of product > ");
         stock.remove(id);
-        System.out.println("Product with ID " +id+ " has been added");
     }
 }

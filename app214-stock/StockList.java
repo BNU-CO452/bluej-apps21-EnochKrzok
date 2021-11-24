@@ -37,7 +37,7 @@ public class StockList
         Product product = findProduct(productID);
         if(product != null) 
         {
-            System.out.println(product + "has been removed");
+            System.out.println(product + " has been removed");
             stock.remove(product);
         }
         else
@@ -108,7 +108,7 @@ public class StockList
     {
         for(Product product : stock)
         {
-            if(product.getName().startsWith(phrase) == true)
+            if(product.getName().toLowerCase().contains(phrase.toLowerCase()) == true)
             {
                 System.out.println(product);
             }

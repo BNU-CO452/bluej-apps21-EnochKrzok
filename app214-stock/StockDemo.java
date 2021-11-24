@@ -51,6 +51,7 @@ public class StockDemo
      */
     private void addProducts()
     {
+        stock.add(new Product(100, "Minecraft"));
         stock.add(new Product(101, "Horizon Zero Dawn"));
         stock.add(new Product(102, "Forza Horizon 5"));
         stock.add(new Product(103, "League of Ledgends"));
