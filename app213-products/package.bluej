@@ -1,11 +1,11 @@
 #BlueJ package file
-dependency1.from=StockDemo
-dependency1.to=StockList
+dependency1.from=StockList
+dependency1.to=Product
 dependency1.type=UsesDependency
 dependency2.from=StockDemo
-dependency2.to=Product
+dependency2.to=StockList
 dependency2.type=UsesDependency
-dependency3.from=StockList
+dependency3.from=StockDemo
 dependency3.to=Product
 dependency3.type=UsesDependency
 editor.fx.0.height=737
@@ -18,7 +18,7 @@ package.divider.horizontal=0.6
 package.divider.vertical=0.8481661272923409
 package.editor.height=623
 package.editor.width=654
-package.editor.x=760
+package.editor.x=676
 package.editor.y=0
 package.frame.height=840
 package.frame.width=780
