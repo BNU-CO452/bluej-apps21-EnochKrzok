@@ -20,11 +20,13 @@ import java.util.Iterator;
 public class Location 
 {
     private String description;
-    private HashMap<String, Location> exits;        // stores exits of this room.
+    // stores exit of this room.
+    private HashMap<String, Location> exits;
 
     /**
-     * Create a location described "description". Initially, it has
-     * no exits. "description" is something like "a kitchen" or
+     * Create a location described by "description".
+     * Initially, a location has no exits.
+     * "description" is something like "a kitchen" or
      * "an open court yard".
      */
     public Location(String description) 
@@ -64,19 +66,22 @@ public class Location
     }
 
     /**
-     * Return a string describing the locations's exits, 
+     * Return a string listing the locations's exits,
      * for example "Exits: north west".
      */
     private String getExitString()
     {
-        String returnString = " Exits:";
+        String exitNames = " Exits: ";
         Set<String> keys = exits.keySet();
         
         for(String exit : keys) 
         {
-            returnString += " " + exit;
+            if(exitNames.length() > 8)
+                exitNames += ", " + exit;
+            else
+                exitNames += exit;
         }
-        return returnString;
+        return exitNames;
     }
 
     /**
