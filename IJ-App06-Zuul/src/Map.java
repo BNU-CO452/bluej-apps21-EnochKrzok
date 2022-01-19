@@ -5,12 +5,18 @@ import java.util.Random;
  * linking all the Locations in the game to
  * form a 2D or 3D network
  *
- *  [Pub]<---->[Outside]<---->[Theatre]
- *                 |
- *          [Computer Lab]<---->[Office]
- *             
- * @author Derek Peacock and Nicholas Day
- * @version 2021-08-22
+ *  [Village]    <---->   [Path] <----> [Dungeon Entrance] <----> [Forest] <----> [Valley] <----> [Rocky Mountain Path]
+ *      |                   |                                                                               |
+ *[North Beach]         [Meadow]                                                                      [Mountain Peak]
+ *      |                  |                                                                                |
+ *[Palm Beach] <----> [East Beach]                                                               [Wooded Mountain Path]
+ *                                                                                                          |
+ *                                                                                                     [Crossroad] <----> [?]
+ *                                                                                                          |              |
+ *                                                                                                        [?] <----> [Sandy Beach]
+ *
+ * @author Derek Peacock and Nicholas Day & Enoch Jozue Krzok
+ * @version 01/01/2022
  */
 public class Map
 {
@@ -20,16 +26,12 @@ public class Map
 
     private Location currentLocation;
 
-    private Random rand;
-
     /**
      * Constructor for objects of class Map
      */
     public Map()
     {
         createLocations();
-        rand = new Random();
-        int n = rand.nextInt(2);
     }
 
     /**
@@ -56,7 +58,7 @@ public class Map
         createTreasureHouse();
         createHauntedHouse();
         createSandyBeach();
-        currentLocation = palmBeach;  // start game palmBeach
+        currentLocation = crossroad;  // start game palmBeach
     }
     
     /**
@@ -65,7 +67,7 @@ public class Map
      */
     private void createPalmBeach()
     {
-        palmBeach = new Location("outside the main entrance of the university");
+        palmBeach = new Location("on a beach with some palms");
     }
     
     /**
@@ -73,7 +75,7 @@ public class Map
      */
     private void createNorthBeach()
     {
-        northBeach = new Location("in the campus pub");
+        northBeach = new Location("on a beach to the north");
         
         northBeach.setExit("south", palmBeach);
         palmBeach.setExit("north", northBeach);
@@ -84,7 +86,7 @@ public class Map
      */
     private void createEastBeach()
     {
-        eastBeach = new Location("in a lecture theater");
+        eastBeach = new Location("on a beach to the east");
         
         eastBeach.setExit("east", palmBeach);
         palmBeach.setExit("west", eastBeach);
@@ -95,7 +97,7 @@ public class Map
      */
     private void createVillage()
     {
-        village = new Location("in the computing admin office");
+        village = new Location("in a village");
 
         village.setExit("south", northBeach);
         northBeach.setExit("north", village);
@@ -106,7 +108,7 @@ public class Map
      */
     private void createMeadow()
     {
-        meadow = new Location("in the computing admin office");
+        meadow = new Location("in a meadow");
 
         meadow.setExit("south", eastBeach);
         eastBeach.setExit("north", meadow);
@@ -118,7 +120,7 @@ public class Map
     private void createPath()
     {
         // create the Locations
-        path = new Location("in a computing lab");
+        path = new Location("on a path");
         
         path.setExit("west", village);
         village.setExit("east", path);
@@ -132,7 +134,7 @@ public class Map
      */
     private void createDungeonEntrance()
     {
-        dungeonEntrance = new Location("in the computing admin office");
+        dungeonEntrance = new Location("at a dungeon entrance but the entrance seems locked");
 
         dungeonEntrance.setExit("west", path);
         path.setExit("east", dungeonEntrance);
@@ -143,7 +145,7 @@ public class Map
      */
     private void createForest()
     {
-        forest = new Location("in the computing admin office");
+        forest = new Location("in a forest");
 
         forest.setExit("west", dungeonEntrance);
         dungeonEntrance.setExit("east", forest);
@@ -154,7 +156,7 @@ public class Map
      */
     private void createValley()
     {
-        valley = new Location("in the computing admin office");
+        valley = new Location("in a valley");
 
         valley.setExit("west", forest);
         forest.setExit("east", valley);
@@ -165,7 +167,7 @@ public class Map
      */
     private void createRockyMountainPath()
     {
-        rockyMountainPath = new Location("in the computing admin office");
+        rockyMountainPath = new Location("on a rockey path");
 
         rockyMountainPath.setExit("west", valley);
         valley.setExit("east", rockyMountainPath);
@@ -176,7 +178,7 @@ public class Map
      */
     private void createMountainPeak()
     {
-        mountainPeak = new Location("in the computing admin office");
+        mountainPeak = new Location("on the mountain peak");
 
         mountainPeak.setExit("north", rockyMountainPath);
         rockyMountainPath.setExit("south", mountainPeak);
@@ -187,7 +189,7 @@ public class Map
      */
     private void createWoodedMountainPath()
     {
-        woodedMountainPath = new Location("in the computing admin office");
+        woodedMountainPath = new Location("in a wooded rocky place");
 
         woodedMountainPath.setExit("north", mountainPeak);
         mountainPeak.setExit("south", woodedMountainPath);
@@ -198,7 +200,7 @@ public class Map
      */
     private void createCrossroad()
     {
-        crossroad = new Location("in the computing admin office");
+        crossroad = new Location("on a crossroad (pick correctly or you die)");
 
         crossroad.setExit("north", woodedMountainPath);
         woodedMountainPath.setExit("south", crossroad);
@@ -209,22 +211,7 @@ public class Map
      */
     private void createTreasureHouse()
     {
-        treasureHouse = new Location("in the computing admin office");
-
-        if (n==0)
-        {
-            treasureHouse.setExit("north", crossroad);
-            crossroad.setExit("south", treasureHouse);
-            treasureHouse.setExit("east", sandyBeach);
-            sandyBeach.setExit("west", treasureHouse);
-        }
-        else
-        {
-            treasureHouse.setExit("west", crossroad);
-            crossroad.setExit("east", treasureHouse);
-            treasureHouse.setExit("south", sandyBeach);
-            sandyBeach.setExit("north", treasureHouse);
-        }
+        treasureHouse = new Location("in a treasure house");
     }
 
     /**
@@ -232,22 +219,7 @@ public class Map
      */
     private void createHauntedHouse()
     {
-        hauntedHouse = new Location("in the computing admin office");
-
-        if (n==1)
-        {
-            hauntedHouse.setExit("north", crossroad);
-            crossroad.setExit("south", hauntedHouse);
-            treasureHouse.setExit("east", sandyBeach);
-            sandyBeach.setExit("west", treasureHouse);
-        }
-        else
-        {
-            hauntedHouse.setExit("west", crossroad);
-            crossroad.setExit("east", hauntedHouse);
-            treasureHouse.setExit("south", sandyBeach);
-            sandyBeach.setExit("north", treasureHouse);
-        }
+        hauntedHouse = new Location("dead");
     }
 
     /**
@@ -255,7 +227,31 @@ public class Map
      */
     private void createSandyBeach()
     {
-        sandyBeach = new Location("in the computing admin office");
+        sandyBeach = new Location("on a sandy beach");
+        Random rand = new Random();
+        int n = rand.nextInt(2);
+        if (n==0)
+        {
+            crossroad.setExit("south", treasureHouse);
+            crossroad.setExit("east", hauntedHouse);
+            treasureHouse.setExit("north", crossroad);
+            treasureHouse.setExit("east", sandyBeach);
+            hauntedHouse.setExit("west", crossroad);
+            hauntedHouse.setExit("south", sandyBeach);
+            sandyBeach.setExit("west", treasureHouse);
+            sandyBeach.setExit("north", treasureHouse);
+        }
+        else
+        {
+            crossroad.setExit("east", treasureHouse);
+            crossroad.setExit("south", hauntedHouse);
+            treasureHouse.setExit("west", crossroad);
+            treasureHouse.setExit("south", sandyBeach);
+            hauntedHouse.setExit("north", crossroad);
+            hauntedHouse.setExit("east", sandyBeach);
+            sandyBeach.setExit("north", treasureHouse);
+            sandyBeach.setExit("west", treasureHouse);
+        }
     }
     public Location getCurrentLocation()
     {

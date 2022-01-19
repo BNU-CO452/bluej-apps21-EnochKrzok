@@ -1,6 +1,5 @@
-import java.util.Set;
 import java.util.HashMap;
-import java.util.Iterator;
+import java.util.Set;
 
 /**
  * Class Location - a location on the map of an adventure game.
@@ -13,8 +12,8 @@ import java.util.Iterator;
  * location stores a reference to the neighboring locations.
  * 
  * @author  Michael Kölling and David J. Barnes
- * Modified by Derek Peacock & Nicholas Day
- * @version 2016.02.29
+ * Modified by Derek Peacock & Nicholas Day & Enoch Jozue Krzok
+ * @version 01/01/2022
  */
 
 public class Location 

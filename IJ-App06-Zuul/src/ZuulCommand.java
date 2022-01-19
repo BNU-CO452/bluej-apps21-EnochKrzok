@@ -16,8 +16,8 @@
  * This replaces the BlueJ Command class and is based
  * on the classic Command design pattern
  * 
- * Derek Peacock & Nicholas Day
- * @version 2021-08-23
+ * Derek Peacock & Nicholas Day & Enoch Jozue Krzok
+ * @version 01/01/2022
  */
 public abstract class ZuulCommand
 {

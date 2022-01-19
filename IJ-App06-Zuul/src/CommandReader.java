@@ -1,5 +1,4 @@
 import java.util.Scanner;
-import java.util.ArrayList;
 /**
  * This class is part of the "World of Zuul" application. 
  * "World of Zuul" is a very simple, text based adventure game.  
@@ -13,8 +12,8 @@ import java.util.ArrayList;
  * the known commands, and if the input is not one of the known commands, it
  * returns a command object that is marked as an unknown command.
  * 
- * @author  Michael Kölling and David J. Barnes
- * @version 2016.02.29
+ * @author  Michael Kölling and David J. Barnes & Enoch Jozue Krzok
+ * @version 01/01/2022
  */
 public class CommandReader 
 {
