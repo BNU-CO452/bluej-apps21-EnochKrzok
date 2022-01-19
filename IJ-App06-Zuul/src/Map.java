@@ -58,7 +58,7 @@ public class Map
         createTreasureHouse();
         createHauntedHouse();
         createSandyBeach();
-        currentLocation = crossroad;  // start game palmBeach
+        currentLocation = palmBeach;  // start game palmBeach
     }
     
     /**

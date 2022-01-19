@@ -47,7 +47,7 @@ public class CommandReader
         if(tokenizer.hasNext()) 
         {
             commandWord = tokenizer.next();      // get first word
-        
+
             if(tokenizer.hasNext()) 
             {
                 word2 = tokenizer.next();      // get second word
