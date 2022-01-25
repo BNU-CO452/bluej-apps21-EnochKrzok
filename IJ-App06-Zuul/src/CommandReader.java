@@ -41,9 +41,29 @@ public class CommandReader
         System.out.print(" > ");
         inputLine = reader.nextLine().toLowerCase();
 
+        if(inputLine.matches("n"))
+        {
+            inputLine = "go north";
+        }
+        else if(inputLine.matches("e"))
+        {
+            inputLine = "go east";
+        }
+        else if(inputLine.matches("s"))
+        {
+            inputLine = "go south";
+        }
+        else if(inputLine.matches("w"))
+        {
+            inputLine = "go west";
+        }
+        else if(inputLine.matches("q"))
+        {
+            inputLine = "quit";
+        }
         // Find up to two words on the line.
         Scanner tokenizer = new Scanner(inputLine);
-        
+
         if(tokenizer.hasNext()) 
         {
             commandWord = tokenizer.next();      // get first word
