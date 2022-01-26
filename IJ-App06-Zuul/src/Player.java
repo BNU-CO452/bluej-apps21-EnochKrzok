@@ -3,19 +3,12 @@ import java.util.ArrayList;
 public class Player
 {
     public ArrayList<Item> inventory;
-    public Item item;
-    public Location location;
-    public Map map;
-
     public Player()
     {
         inventory = new ArrayList<>();
     }
 
-    /**
-     * Adds item to inventory
-     */
-    public void addInventory(Item item)
+    public void add(Item item)
     {
         inventory.add(item);
     }

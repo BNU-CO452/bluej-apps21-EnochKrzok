@@ -26,8 +26,6 @@ public class Map
 
     private Location currentLocation;
 
-    public Item katana, glasses, key, 
-
     /**
      * Constructor for objects of class Map
      */
@@ -83,6 +81,7 @@ public class Map
         
         northBeach.setExit("south", palmBeach);
         palmBeach.setExit("north", northBeach);
+
 
         northBeach.setItem(new Item("burger","You die because you are unhealthy"));
     }

@@ -99,6 +99,19 @@ public class Location {
     {
         itemList.add(item);
     }
+
+    public Item findItem(String itemName)
+    {
+        for(Item item : itemList)
+        {
+            if(item.getItemName().toLowerCase().equals(itemName.toLowerCase()))
+            {
+                return item;
+            }
+        }
+        return null;
+    }
+
     /**
      * Prints all items in the location
      */
@@ -107,23 +120,7 @@ public class Location {
         System.out.println(" You found items: ");
         for (Item item : itemList)
         {
-            System.out.println(" " + item.getItemName() + " : " + item.getItemDescription());
-            System.out.println("\n");
-        }
-    }
-
-    public void takeItem(Item item)
-    {
-
-        if(itemList.contains(item))
-        {
-            player.addInventory(item);
-            itemList.remove(item);
-            System.out.println(" The item '" + item.getItemName() + "' has been taken. " + item.getItemDescription() + "\n");
-        }
-        else
-        {
-            System.out.println("you have failed");
+            System.out.println(" " + item.getItemName() + " : " + item.getItemDescription()+"\n");
         }
     }
 }

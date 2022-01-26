@@ -40,11 +40,10 @@ public class Game
     {            
         printWelcome();
         gameOver = false;
-        boolean gameover = PLAYER.life();
         // Enter the main command loop.  Here we repeatedly 
         // read commands and execute them until the game is over.
 
-        while (!gameOver && !gameover)
+        while (!gameOver)
         {
             gameOver = reader.getCommand();
         }
