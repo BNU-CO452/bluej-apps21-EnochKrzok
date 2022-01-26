@@ -3,6 +3,8 @@ import java.util.ArrayList;
 public class Player
 {
     public ArrayList<Item> inventory;
+    //private Hitpoints hp;
+    //private Strenth str;
     public Player()
     {
         inventory = new ArrayList<>();
@@ -20,7 +22,7 @@ public class Player
     {
         System.out.println("The items in inventory are:");
         for (Item item : inventory) {
-            System.out.println(item.getItemName());
+            System.out.println(item.getItemName()+item.getItemDescription());
         }
     }
 

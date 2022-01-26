@@ -70,6 +70,7 @@ public class Map
         palmBeach = new Location("on a beach with some palms");
 
         palmBeach.setItem(new Item("snack","adds 100 hp"));
+        palmBeach.setItem(new Item("plank1","help you build raft"));
     }
     
     /**
@@ -82,8 +83,6 @@ public class Map
         northBeach.setExit("south", palmBeach);
         palmBeach.setExit("north", northBeach);
 
-
-        northBeach.setItem(new Item("burger","You die because you are unhealthy"));
     }
     
     /**
@@ -106,6 +105,17 @@ public class Map
 
         village.setExit("south", northBeach);
         northBeach.setExit("north", village);
+
+        village.setItem(new Item("map ","\n" +
+                "  [Village]    <---->   [Path] <----> [Dungeon Entrance] <----> [Forest] <----> [Valley] <----> [Rocky Mountain Path]\n" +
+                "       |                   |                                                                               |\n" +
+                " [North Beach]         [Meadow]                                                                      [Mountain Peak]\n" +
+                "      |                  |                                                                                |\n" +
+                " [Palm Beach] <----> [East Beach]                                                               [Wooded Mountain Path]\n" +
+                "                                                                                                           |\n" +
+                "                                                                                                      [Crossroad] <----> [?]\n" +
+                "                                                                                                           |              |\n" +
+                "                                                                                                         [?] <----> [Sandy Beach]"));
     }
 
     /**
@@ -132,6 +142,8 @@ public class Map
         
         path.setExit("south", meadow);
         meadow.setExit("north", path);
+
+        path.setItem(new Item("glasses","you can see the enemy's health and strength"));
     }
 
     /**
@@ -154,6 +166,8 @@ public class Map
 
         forest.setExit("west", dungeonEntrance);
         dungeonEntrance.setExit("east", forest);
+
+        forest.setItem(new Item("plank2","help you build raft"));
     }
 
     /**
@@ -187,6 +201,8 @@ public class Map
 
         mountainPeak.setExit("north", rockyMountainPath);
         rockyMountainPath.setExit("south", mountainPeak);
+
+        mountainPeak.setItem(new Item("key","A mysterious key"));
     }
 
     /**
@@ -198,6 +214,8 @@ public class Map
 
         woodedMountainPath.setExit("north", mountainPeak);
         mountainPeak.setExit("south", woodedMountainPath);
+
+        woodedMountainPath.setItem(new Item("plank3","help you build raft"));
     }
 
     /**
@@ -217,6 +235,8 @@ public class Map
     private void createTreasureHouse()
     {
         treasureHouse = new Location("in a treasure house");
+
+        treasureHouse.setItem(new Item("plank4","help you build raft"));
     }
 
     /**
