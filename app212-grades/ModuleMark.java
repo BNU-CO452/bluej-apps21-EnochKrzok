@@ -2,8 +2,8 @@
 /**
  * Write a description of class ModuleMark here.
  *
- * @author Derek Peacock and Nicholas Day
- * @version 2021-08-18
+ * @author Derek Peacock and Nicholas Day and Enoch Jozue Krzok
+ * @version 2.0 20/10/2021
  */
 public class ModuleMark
 {
@@ -19,6 +19,9 @@ public class ModuleMark
         this.module = module;
     }
     
+    /**
+     * gives you mark
+     */
     public int getValue()
     {
         return mark;
@@ -40,11 +43,17 @@ public class ModuleMark
         }
     }
     
+    /**
+     * set the value of mark
+     */
     public void setMark(int mark)
     {
         this.mark = mark;
     }
     
+    /**
+     * gets the module
+     */
     public Module getModule()
     {
         return module;
@@ -57,6 +66,6 @@ public class ModuleMark
     public void print()
     {
         module.print();
-        System.out.print("\t  " + getCredit() + "\t" + mark);
+        System.out.print("\t  " + getCredit() + "\t  " + mark);
     }
 }

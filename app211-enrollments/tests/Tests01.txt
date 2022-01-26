@@ -1,0 +1,16 @@
+artificialIntelligence.print();
+ --------------------------------
+   App211: Course Details
+ --------------------------------
+
+ Course Code: BB1ARI1: BSc Artificial Intelligence
+
+enoch.print();
+ Student ID: 22140200 Name: Enoch Jozue Krzok
+enoch.printCourse();
+ --------------------------------
+   App211: Course Details
+ --------------------------------
+
+ Course Code: BB1ARI1: BSc Artificial Intelligence
+

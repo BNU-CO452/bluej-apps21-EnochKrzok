@@ -1,0 +1,32 @@
+Student enoch = new Student("Enoch Jozue Krzok", 22140200);
+enoch.print();
+ Student ID: 22140200, Enoch Jozue Krzok
+Course ai = new Course("BB1ARI1", "BSc Artificial Intelligence");
+enoch.enrol(ai);
+enoch.printCourse();
+ Student ID: 22140200, Enoch Jozue Krzok
+
+ Course BB1ARI1: BSc Artificial Intelligence
+
+Module co452 = new Module("CO452", "Programming Concepts");
+ai.addModule(co452);
+ModuleMark co452mark = new ModuleMark(co452);
+co452mark.setMark(95);
+enoch.addMark(co452mark);
+enoch.printTranscript();
+ ------------------------------------
+ App21-02: Exam Board Transcript 2021
+        by student name
+ ------------------------------------
+ Student ID: 22140200, Enoch Jozue Krzok
+
+ Course BB1ARI1: BSc Artificial Intelligence
+
+
+
+ ---- 	 -------------------- 	 ------	 ---- 	 -----
+ Code 	 Module 		Credit	 Mark 	 Grade
+ ---- 	 -------------------- 	 ------	 ---- 	 -----
+
+
+ No Final Course Grade Yet!

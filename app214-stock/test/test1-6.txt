@@ -1,0 +1,199 @@
+You have brought 217 of Battlefield 2042
+You have brought 111 of Test Drive Unlimited Solar Crown
+You have brought 986 of Horizon Forbidden west
+
+ Enoch's way of showing Stock List
+ ====================================
+
+ ID 101: Horizon Zero Dawn stock level: 231
+ ID 102: Forza Horizon 5 stock level: 1000
+ ID 103: League of Ledgends stock level: 0
+ ID 104: CSGO stock level: 1
+ ID 105: Hot Wheels Unleashed stock level: 738
+ ID 106: Assassin's Creed Valhalla stock level: 395
+ ID 107: Far Cry 6 stock level: 51
+ ID 108: Battlefield 2042 stock level: 217
+ ID 109: Test Drive Unlimited Solar Crown stock level: 111
+ ID 110: Horizon Forbidden west stock level: 986
+
+You have sold 123 the Horizon Zero Dawn
+You have sold 768 the Forza Horizon 5
+League of Ledgends You can't buy 7 we only have 0
+CSGO You can't buy 17 we only have 1
+You have sold 167 the Hot Wheels Unleashed
+You have sold 337 the Assassin's Creed Valhalla
+You have sold 21 the Far Cry 6
+You have sold 127 the Battlefield 2042
+You have sold 11 the Test Drive Unlimited Solar Crown
+You have sold 896 the Horizon Forbidden west
+
+ Enoch's way of showing Stock List
+ ====================================
+
+ ID 101: Horizon Zero Dawn stock level: 108
+ ID 102: Forza Horizon 5 stock level: 232
+ ID 103: League of Ledgends stock level: 0
+ ID 104: CSGO stock level: 1
+ ID 105: Hot Wheels Unleashed stock level: 571
+ ID 106: Assassin's Creed Valhalla stock level: 58
+ ID 107: Far Cry 6 stock level: 30
+ ID 108: Battlefield 2042 stock level: 90
+ ID 109: Test Drive Unlimited Solar Crown stock level: 100
+ ID 110: Horizon Forbidden west stock level: 90
+
+********************************
+  App21-04: Stock Application 
+      by Enoch Jozue Krzok
+********************************
+
+Add(1):        Add a new product
+Remove(2):     Remove an old product
+Search(3):     Search for products by what there name starts with, it will give you ID and quantity of product
+Buy(4):        Buy an existing product by ID(amount between 1 and 10(you pick))
+Sell(5):       Sell an existing product by ID(amount between 1 and 10(you pick))
+Low Stock(6):  Print all products that have low stock(amount between 1 and 5 (you pick)),then have a option if you want to restock the low stock(will buy 10)
+Re-stock(7):   Restock (amount between 1 and 10(you pick)) the products that have lowstock(amount between 1 and 5 (you pick))
+Print(8):      Print all the products, this will show the name, ID and quantity of all products
+Quit(9):       Quit the program
+
+Please enter your choice > print
+
+ Enoch's way of showing Stock List
+ ====================================
+
+ ID 101: Horizon Zero Dawn stock level: 108
+ ID 102: Forza Horizon 5 stock level: 232
+ ID 103: League of Ledgends stock level: 0
+ ID 104: CSGO stock level: 1
+ ID 105: Hot Wheels Unleashed stock level: 571
+ ID 106: Assassin's Creed Valhalla stock level: 58
+ ID 107: Far Cry 6 stock level: 30
+ ID 108: Battlefield 2042 stock level: 90
+ ID 109: Test Drive Unlimited Solar Crown stock level: 100
+ ID 110: Horizon Forbidden west stock level: 90
+
+********************************
+  App21-04: Stock Application 
+      by Enoch Jozue Krzok
+********************************
+
+Add(1):        Add a new product
+Remove(2):     Remove an old product
+Search(3):     Search for products by what there name starts with, it will give you ID and quantity of product
+Buy(4):        Buy an existing product by ID(amount between 1 and 10(you pick))
+Sell(5):       Sell an existing product by ID(amount between 1 and 10(you pick))
+Low Stock(6):  Print all products that have low stock(amount between 1 and 5 (you pick)),then have a option if you want to restock the low stock(will buy 10)
+Re-stock(7):   Restock (amount between 1 and 10(you pick)) the products that have lowstock(amount between 1 and 5 (you pick))
+Print(8):      Print all the products, this will show the name, ID and quantity of all products
+Quit(9):       Quit the program
+
+Please enter your choice > add
+Please enter ID of product > 
+111
+Please enter name of product > Minecraft
+Product Minecraft with ID 111 has been added
+********************************
+  App21-04: Stock Application 
+      by Enoch Jozue Krzok
+********************************
+
+Add(1):        Add a new product
+Remove(2):     Remove an old product
+Search(3):     Search for products by what there name starts with, it will give you ID and quantity of product
+Buy(4):        Buy an existing product by ID(amount between 1 and 10(you pick))
+Sell(5):       Sell an existing product by ID(amount between 1 and 10(you pick))
+Low Stock(6):  Print all products that have low stock(amount between 1 and 5 (you pick)),then have a option if you want to restock the low stock(will buy 10)
+Re-stock(7):   Restock (amount between 1 and 10(you pick)) the products that have lowstock(amount between 1 and 5 (you pick))
+Print(8):      Print all the products, this will show the name, ID and quantity of all products
+Quit(9):       Quit the program
+
+Please enter your choice > add
+Please enter ID of product > 
+105
+Sorry this ID has already got a product assigned to it
+********************************
+  App21-04: Stock Application 
+      by Enoch Jozue Krzok
+********************************
+
+Add(1):        Add a new product
+Remove(2):     Remove an old product
+Search(3):     Search for products by what there name starts with, it will give you ID and quantity of product
+Buy(4):        Buy an existing product by ID(amount between 1 and 10(you pick))
+Sell(5):       Sell an existing product by ID(amount between 1 and 10(you pick))
+Low Stock(6):  Print all products that have low stock(amount between 1 and 5 (you pick)),then have a option if you want to restock the low stock(will buy 10)
+Re-stock(7):   Restock (amount between 1 and 10(you pick)) the products that have lowstock(amount between 1 and 5 (you pick))
+Print(8):      Print all the products, this will show the name, ID and quantity of all products
+Quit(9):       Quit the program
+
+Please enter your choice > remove
+Please enter ID of product > 
+103
+ ID 103: League of Ledgends stock level: 0 has been removed
+********************************
+  App21-04: Stock Application 
+      by Enoch Jozue Krzok
+********************************
+
+Add(1):        Add a new product
+Remove(2):     Remove an old product
+Search(3):     Search for products by what there name starts with, it will give you ID and quantity of product
+Buy(4):        Buy an existing product by ID(amount between 1 and 10(you pick))
+Sell(5):       Sell an existing product by ID(amount between 1 and 10(you pick))
+Low Stock(6):  Print all products that have low stock(amount between 1 and 5 (you pick)),then have a option if you want to restock the low stock(will buy 10)
+Re-stock(7):   Restock (amount between 1 and 10(you pick)) the products that have lowstock(amount between 1 and 5 (you pick))
+Print(8):      Print all the products, this will show the name, ID and quantity of all products
+Quit(9):       Quit the program
+
+Please enter your choice > remove
+Please enter ID of product > 
+123
+No item with that ID exist
+********************************
+  App21-04: Stock Application 
+      by Enoch Jozue Krzok
+********************************
+
+Add(1):        Add a new product
+Remove(2):     Remove an old product
+Search(3):     Search for products by what there name starts with, it will give you ID and quantity of product
+Buy(4):        Buy an existing product by ID(amount between 1 and 10(you pick))
+Sell(5):       Sell an existing product by ID(amount between 1 and 10(you pick))
+Low Stock(6):  Print all products that have low stock(amount between 1 and 5 (you pick)),then have a option if you want to restock the low stock(will buy 10)
+Re-stock(7):   Restock (amount between 1 and 10(you pick)) the products that have lowstock(amount between 1 and 5 (you pick))
+Print(8):      Print all the products, this will show the name, ID and quantity of all products
+Quit(9):       Quit the program
+
+Please enter your choice > print
+
+ Enoch's way of showing Stock List
+ ====================================
+
+ ID 101: Horizon Zero Dawn stock level: 108
+ ID 102: Forza Horizon 5 stock level: 232
+ ID 104: CSGO stock level: 1
+ ID 105: Hot Wheels Unleashed stock level: 571
+ ID 106: Assassin's Creed Valhalla stock level: 58
+ ID 107: Far Cry 6 stock level: 30
+ ID 108: Battlefield 2042 stock level: 90
+ ID 109: Test Drive Unlimited Solar Crown stock level: 100
+ ID 110: Horizon Forbidden west stock level: 90
+ ID 111: Minecraft stock level: 0
+
+********************************
+  App21-04: Stock Application 
+      by Enoch Jozue Krzok
+********************************
+
+Add(1):        Add a new product
+Remove(2):     Remove an old product
+Search(3):     Search for products by what there name starts with, it will give you ID and quantity of product
+Buy(4):        Buy an existing product by ID(amount between 1 and 10(you pick))
+Sell(5):       Sell an existing product by ID(amount between 1 and 10(you pick))
+Low Stock(6):  Print all products that have low stock(amount between 1 and 5 (you pick)),then have a option if you want to restock the low stock(will buy 10)
+Re-stock(7):   Restock (amount between 1 and 10(you pick)) the products that have lowstock(amount between 1 and 5 (you pick))
+Print(8):      Print all the products, this will show the name, ID and quantity of all products
+Quit(9):       Quit the program
+
+Please enter your choice > quit
+You have quit the app and it did not save

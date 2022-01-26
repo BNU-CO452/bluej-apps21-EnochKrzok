@@ -1,9 +1,9 @@
 
 /**
- * Write a description of class Program here.
+ * This whole class is made so we can run the program in a terminal
  *
- * @author (your name)
- * @version (a version number or a date)
+ * @author Enoch Jozue Krzok
+ * @version 17/11/2021
  */
 public class Program
 {

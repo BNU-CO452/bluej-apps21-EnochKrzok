@@ -14,16 +14,15 @@
  * If the command had only one word, then the second word is <null>.
  * 
  * This replaces the BlueJ Command class and is based
- * on the classic Coomand design pattern
+ * on the classic Command design pattern
  * 
- * Derek Peacock & Nicholas Day
- * @version 2021-08-23
+ * Derek Peacock & Nicholas Day & Enoch Jozue Krzok
+ * @version 01/01/2022
  */
 public abstract class ZuulCommand
 {
     protected Game zuul;
     protected String secondWord;
-
     /**
      * Constructor for objects of class ZuulCommand
      */

@@ -8,6 +8,7 @@ import java.util.Scanner;
  * @version    0.1 (2016.02.29)
  * 
  * Modified by Derek Peacock 13/12/2020
+ * Modified by Enoch Jozue Krzok 17/11/2021
  */
 public class InputReader
 {
@@ -29,6 +30,8 @@ public class InputReader
      */
     public String getString(String prompt)
     {
+        reader = new Scanner(System.in);
+        
         String inputLine = null;
         boolean isValid = false;
         

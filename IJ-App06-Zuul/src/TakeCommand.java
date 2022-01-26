@@ -5,35 +5,36 @@
  * and carry it around to use somewhere
  * else
  *
- * @author Derek Peacock & Nicholas Day
- * @version 2021-08-23
+ * @author Derek Peacock & Nicholas Day & Enoch Jozue Krzok
+ * @version 01/01/2022
  */
 public class TakeCommand extends ZuulCommand
 {
-    String item;
-    
+    String word;
+    private Location location;
+    private Item item;
     /**
      * Take an item from a location and add it
      * to the player's inventory.
      */
-    public TakeCommand(Game zuul, String item)
+    public TakeCommand(Game zuul, String word)
     {
         super(zuul);
-        this.item = item;
+        this.word = word;
     }    
 
     public void execute()
     {
-        if(item == null) 
+        if(word == null)
         {
             // if there is no second word, we don't know what to take...
             System.out.println("Take what?");
             return;
         }
-
         Map map = zuul.MAP;
         // remove the item from the current room
         // and add it to the player's inventory
         // Print out a suitable message.
+        map.getCurrentLocation().takeItem(item);
     }
 }

@@ -1,5 +1,4 @@
 import java.util.Scanner;
-import java.util.ArrayList;
 /**
  * This class is part of the "World of Zuul" application. 
  * "World of Zuul" is a very simple, text based adventure game.  
@@ -13,8 +12,8 @@ import java.util.ArrayList;
  * the known commands, and if the input is not one of the known commands, it
  * returns a command object that is marked as an unknown command.
  * 
- * @author  Michael Kölling and David J. Barnes
- * @version 2016.02.29
+ * @author  Michael Kölling and David J. Barnes & Enoch Jozue Krzok
+ * @version 01/01/2022
  */
 public class CommandReader 
 {
@@ -42,13 +41,41 @@ public class CommandReader
         System.out.print(" > ");
         inputLine = reader.nextLine().toLowerCase();
 
+        if(inputLine.matches("n"))
+        {
+            inputLine = "go north";
+        }
+        else if(inputLine.matches("e"))
+        {
+            inputLine = "go east";
+        }
+        else if(inputLine.matches("s"))
+        {
+            inputLine = "go south";
+        }
+        else if(inputLine.matches("w"))
+        {
+            inputLine = "go west";
+        }
+        else if(inputLine.matches("q"))
+        {
+            inputLine = "quit";
+        }
+        else if(inputLine.matches("l"))
+        {
+            inputLine = "look";
+        }
+        else if(inputLine.matches("i"))
+        {
+            inputLine = "look inventory";
+        }
         // Find up to two words on the line.
         Scanner tokenizer = new Scanner(inputLine);
-        
+
         if(tokenizer.hasNext()) 
         {
             commandWord = tokenizer.next();      // get first word
-        
+
             if(tokenizer.hasNext()) 
             {
                 word2 = tokenizer.next();      // get second word
@@ -81,7 +108,11 @@ public class CommandReader
         {
             return true;  // game over
         }
-
+        else if(commandWord.equals(CommandWords.LOOK.word))
+        {
+            LookCommand look = new LookCommand(game, word2);
+            look.execute();
+        }
         // Return false means the game is not over
         return false;
     }

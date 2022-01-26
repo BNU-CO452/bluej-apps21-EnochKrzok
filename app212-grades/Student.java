@@ -1,11 +1,13 @@
 import java.util.*;
+//adds the random function
+import java.util.Random;
 /**
  * The Student class represents a student in a student administration system.
  * It holds the student details relevant in our context.
  * 
  * @author Michael Kölling and David Barnes
- * Modified by Derek Peacock & Nicholas Day
- * @version 2021-08-18
+ * Modified by Derek Peacock & Nicholas Day and Enoch Jozue Krzok
+ * @version 2.0 20/10/2021
  */
 public class Student
 {
@@ -17,6 +19,8 @@ public class Student
     private Course course;
     // The marks awarded for the modules on the course
     private ArrayList<ModuleMark> marks;
+    // So i can use diffrent marks
+    private Random randomMark;
     
     /**
      * This constructor creates a new student with a
@@ -24,20 +28,24 @@ public class Student
      */
     public Student()
     {
-        this("Derek", 12345678);
+        this("Enoch Jozue Krzok", 22140200);
     }
     
     /**
      * Create a new student with a given name and ID number.
+     *  And create a random number generater
      */
     public Student(String name, int id)
     {
         this.name = name;
         this.id = id;
-        
+        randomMark = new Random();
         marks = new ArrayList<ModuleMark>();
     }
-
+    
+    /**
+     * adds a mark to the list
+     */
     public void addMark(ModuleMark mark)
     {
         marks.add(mark);
@@ -49,7 +57,7 @@ public class Student
      */
     public void awardMark(String moduleCode, int value)
     {
-
+        
     }
     
     /**
@@ -67,7 +75,12 @@ public class Student
      */
     public void awardTestMarks()
     {
-        
+        for(Module module : course.modules)
+        {
+            ModuleMark mark = new ModuleMark(module);
+            mark.setMark(randomMark.nextInt(100));
+            addMark(mark);
+        }
     }
     
     /**
@@ -93,35 +106,50 @@ public class Student
      */
     public void print()
     {
-        System.out.println(" Student ID: " + id + ", " + name);
+        System.out.println(" Student ID: " + id + ", Student name:  " + name);
     }
     
+    /**
+     * Print the student's course 
+     */
     public void printCourse()
     {
         this.print();
         course.print();
     }
     
+    /**
+     * Print the student's grade 
+     */
     private void printModules()
     {
-
+        for(ModuleMark mark : marks)
+        {
+            mark.print();
+            System.out.println("\t   " + course.convertToGrade(mark.getValue()));
+        }
     }
     
+    /**
+     * Print the student's course (whats in the course and max credits),
+     * modules, marks, credits, grades and final grade
+     */
     public void printTranscript()
     {
         System.out.println(" ------------------------------------");
         System.out.println(" App21-02: Exam Board Transcript 2021");
-        System.out.println("        by student name");
+        System.out.println("        by Enoch Jozue Krzok");
         System.out.println(" ------------------------------------");
         
         printCourse();
         
         System.out.println();
         System.out.println();
-        System.out.println(" ---- \t -------------------- \t ------\t ---- \t -----");
-        System.out.println(" Code \t Module \t\tCredit\t Mark \t Grade");
-        System.out.println(" ---- \t -------------------- \t ------\t ---- \t -----");
+        System.out.println(" ---- \t --------------------------------- \t------\t ---- \t -----");
+        System.out.println(" Code \t Module \t\t\t\tCredit\t Mark \t Grade");
+        System.out.println(" ---- \t --------------------------------- \t------\t ---- \t -----");
         
+        printModules();
        
         Grades finalGrade = course.calculateGrade(marks);
         
