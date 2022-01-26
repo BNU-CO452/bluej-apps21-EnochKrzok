@@ -23,7 +23,6 @@ public abstract class ZuulCommand
 {
     protected Game zuul;
     protected String secondWord;
-
     /**
      * Constructor for objects of class ZuulCommand
      */

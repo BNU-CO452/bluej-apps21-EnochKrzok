@@ -19,6 +19,7 @@
 public class Game 
 {
     public final Map MAP;
+    public Player PLAYER;
     private CommandReader reader;
     private boolean gameOver;
         
@@ -28,6 +29,7 @@ public class Game
     public Game() 
     {
         MAP = new Map();
+        PLAYER = new Player();
         reader = new CommandReader(this);
     }
 
@@ -38,11 +40,11 @@ public class Game
     {            
         printWelcome();
         gameOver = false;
-
+        boolean gameover = PLAYER.life();
         // Enter the main command loop.  Here we repeatedly 
         // read commands and execute them until the game is over.
-                
-        while (! gameOver) 
+
+        while (!gameOver && !gameover)
         {
             gameOver = reader.getCommand();
         }

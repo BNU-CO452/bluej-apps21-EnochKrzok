@@ -22,9 +22,11 @@ public class Map
 {
     // Need to add a list of exits
     
-    private Location palmBeach, northBeach, eastBeach, village, meadow, path, dungeonEntrance, forest, valley, rockyMountainPath, mountainPeak, woodedMountainPath, crossroad, treasureHouse, hauntedHouse, sandyBeach;
+    public Location palmBeach, northBeach, eastBeach, village, meadow, path, dungeonEntrance, forest, valley, rockyMountainPath, mountainPeak, woodedMountainPath, crossroad, treasureHouse, hauntedHouse, sandyBeach;
 
     private Location currentLocation;
+
+    public Item katana, glasses, key, 
 
     /**
      * Constructor for objects of class Map
@@ -68,6 +70,8 @@ public class Map
     private void createPalmBeach()
     {
         palmBeach = new Location("on a beach with some palms");
+
+        palmBeach.setItem(new Item("snack","adds 100 hp"));
     }
     
     /**
@@ -79,6 +83,8 @@ public class Map
         
         northBeach.setExit("south", palmBeach);
         palmBeach.setExit("north", northBeach);
+
+        northBeach.setItem(new Item("burger","You die because you are unhealthy"));
     }
     
     /**

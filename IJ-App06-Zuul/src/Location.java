@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Set;
 
@@ -16,11 +17,13 @@ import java.util.Set;
  * @version 01/01/2022
  */
 
-public class Location 
-{
+public class Location {
     private String description;
     // stores exit of this room.
     private HashMap<String, Location> exits;
+    public ArrayList<Item> itemList;
+    public Item item;
+    public Player player;
 
     /**
      * Create a location described by "description".
@@ -28,19 +31,20 @@ public class Location
      * "description" is something like "a kitchen" or
      * "an open court yard".
      */
-    public Location(String description) 
-    {
+    public Location(String description) {
         this.description = description;
+
         exits = new HashMap<>();
+        itemList = new ArrayList<>();
     }
 
     /**
      * Define an exit from this room.
+     *
      * @param direction The direction of the exit.
      * @param neighbor  The room to which the exit leads.
      */
-    public void setExit(String direction, Location neighbor) 
-    {
+    public void setExit(String direction, Location neighbor) {
         exits.put(direction, neighbor);
     }
 
@@ -48,19 +52,18 @@ public class Location
      * @return The short description of the room
      * (the one that was defined in the constructor).
      */
-    public String getShortDescription()
-    {
+    public String getShortDescription() {
         return description;
     }
 
     /**
      * Return a description of the room in the form:
-     *     You are in the kitchen.
-     *     Exits: north west
+     * You are in the kitchen.
+     * Exits: north west
+     *
      * @return A long description of this room
      */
-    public String getLongDescription()
-    {
+    public String getLongDescription() {
         return " You are " + description + ".\n" + getExitString();
     }
 
@@ -68,14 +71,12 @@ public class Location
      * Return a string listing the locations's exits,
      * for example "Exits: north west".
      */
-    private String getExitString()
-    {
+    private String getExitString() {
         String exitNames = " Exits: ";
         Set<String> keys = exits.keySet();
-        
-        for(String exit : keys) 
-        {
-            if(exitNames.length() > 8)
+
+        for (String exit : keys) {
+            if (exitNames.length() > 8)
                 exitNames += ", " + exit;
             else
                 exitNames += exit;
@@ -86,12 +87,45 @@ public class Location
     /**
      * Return the room that is reached if we go from this room in direction
      * "direction". If there is no room in that direction, return null.
+     *
      * @param direction The exit's direction.
      * @return The room in the given direction.
      */
-    public Location getExit(String direction) 
-    {
+    public Location getExit(String direction) {
         return exits.get(direction);
     }
+
+    public void setItem(Item item)
+    {
+        itemList.add(item);
+    }
+    /**
+     * Prints all items in the location
+     */
+    public void getItemList()
+    {
+        System.out.println(" You found items: ");
+        for (Item item : itemList)
+        {
+            System.out.println(" " + item.getItemName() + " : " + item.getItemDescription());
+            System.out.println("\n");
+        }
+    }
+
+    public void takeItem(Item item)
+    {
+
+        if(itemList.contains(item))
+        {
+            player.addInventory(item);
+            itemList.remove(item);
+            System.out.println(" The item '" + item.getItemName() + "' has been taken. " + item.getItemDescription() + "\n");
+        }
+        else
+        {
+            System.out.println("you have failed");
+        }
+    }
 }
+
 

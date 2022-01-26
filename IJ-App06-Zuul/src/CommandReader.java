@@ -61,6 +61,14 @@ public class CommandReader
         {
             inputLine = "quit";
         }
+        else if(inputLine.matches("l"))
+        {
+            inputLine = "look";
+        }
+        else if(inputLine.matches("i"))
+        {
+            inputLine = "look inventory";
+        }
         // Find up to two words on the line.
         Scanner tokenizer = new Scanner(inputLine);
 
@@ -100,7 +108,11 @@ public class CommandReader
         {
             return true;  // game over
         }
-
+        else if(commandWord.equals(CommandWords.LOOK.word))
+        {
+            LookCommand look = new LookCommand(game, word2);
+            look.execute();
+        }
         // Return false means the game is not over
         return false;
     }
